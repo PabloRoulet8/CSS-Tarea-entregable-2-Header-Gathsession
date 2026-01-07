@@ -1,0 +1,129 @@
+@use 'sass:color';
+@use '../abstracts/abstracts' as *;
+@use '../components/buttons';
+
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; 
+    
+    & .hero-text {
+        margin-top: 50px;
+        padding-right: 50px;
+        width: 50%;
+
+        & h1 {
+            font-size: 62px;
+            font-weight: 600;
+            line-height: 1.2;
+            font-family: $h1-font;
+            margin-bottom: 30px;
+        }
+
+        & p {
+            font-size: 16px;
+            color: $color-gray;
+            line-height: 1.5;
+            width: 85%;
+        }
+
+        & ul {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            align-items: center;
+            margin-bottom: 120px;
+
+            & .cta-button {
+                @include buttons.button;
+            }
+
+            & .cta-link a {
+                text-decoration: underline;
+                color: white;
+                font-weight: 300;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                line-height: 1;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $color-pink;
+                }
+
+                & span img {
+                    width: 32px;
+                }
+            }
+        }
+
+        & .options {
+            display: flex;
+            gap: 20px;
+            width: 80%;
+
+            & .option1, .option2, .option3 {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                
+                & p {
+                    color: white;
+                    font-weight: 500;
+                    font-size: 14px
+                }
+
+                & img {
+                    width: 40px;
+                }
+            }
+        }
+        
+    }
+
+    & .hero-image {
+        position: relative;
+        height: 500px;
+        width: 50%;
+        margin-top: -50px;
+
+        & img {
+            position: absolute;
+            width: 30%;
+            object-fit: cover;
+            display: block;
+        }
+
+        & .img1 {
+            top: 0;
+            left: 0; 
+        }
+
+        & .img2 { 
+            top: 400px;
+            left: 0;
+        }
+
+        & .img3 { 
+            top: 0px;
+            left: 34.5%; 
+        }
+
+        & .img4 {
+            top: 200px;
+            left: 34.5%;     
+             
+        }
+
+        & .img5 {  
+            top: 100px;
+            right: 0; 
+        }         
+    }
+}

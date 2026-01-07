@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+@use 'sass:color';
+
+@mixin button {
+  width: fit-content;
+  padding: 12px 50px;
+  background-color: $color-pink;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px 15px 15px 0px;
+  font-weight: 300;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+      background-color: color.adjust($color-pink, $lightness: -10%);
+  }
+}
